@@ -16,3 +16,20 @@
 # ноутбук
 #     12
 
+list_letters = {1: "AEIOULNSTRАВЕИНОРСТ",
+                2: "DGДКЛМПУ",
+                3: "BCMPБГЁЬЯ",
+                4: "FHVWYЙЫ",
+                5: "KЖЗХЦЧ",
+                8: "JXШЭЮ",
+                10: "QZФЩЪ"}
+
+word = input("Введите любое слово: ").upper()
+summ = 0
+
+for i in word:
+    for key, value in list_letters.items():
+        if i in value:
+            summ += key
+
+print(f"Стоимость слова '{word}' = {summ}")
