@@ -1,4 +1,4 @@
-#Задача №24
+# Задача №24
 
 # В фермерском хозяйстве в Карелии выращивают чернику.
 # Она растёт на круглой грядке, причём кусты высажены
@@ -17,3 +17,11 @@
 # 4 -> 1 2 3 4
 # 9
 
+n = int(input('n = '))
+lis = [int(x) for x in input('Введите кол-во ягод: ').split()]
+n = len(lis)
+lis = lis + lis[:2]
+result = 0
+for i in range(n):
+    result = max(result, lis[i] + lis[i + 1] + lis[i + 2])
+print(result)
